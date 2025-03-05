@@ -1,0 +1,14 @@
+1. Analiza podstawowych danych i budowa profilu: - Marek
+Omówienie, jak na podstawie imienia, nazwiska, wieku i miejscowości można stworzyć ogólny zarys osoby, uzupełniając informacje o wyglądzie, stylu życia, miejscu zamieszkania, pracy oraz potencjalnych zainteresowaniach.
+
+2. Źródła pozyskiwania informacji: - Paulina
+Identyfikacja i analiza publicznie dostępnych źródeł, takich jak media społecznościowe, fora, blogi czy portale informacyjne, z których można pozyskać dodatkowe dane na temat danej osoby.
+
+3. Wykorzystanie danych przez różne podmioty: - Marek
+Omówienie, kto może korzystać z takich informacji – od firm reklamowych i rekruterów, po cyberprzestępców i hakerów – oraz w jaki sposób dane te mogą być używane do profilowania, targetowania reklam czy phishingu.
+
+4. Zagrożenia wynikające z udostępniania danych: - Paulina
+Wskazanie potencjalnych niebezpieczeństw, takich jak kradzież tożsamości, naruszenie prywatności, cyberstalking, oszustwa internetowe, a także konsekwencje reputacyjne i prawne dla osoby, której dane są powszechnie dostępne.
+
+5. Zalecenia dotyczące ochrony prywatności:
+Propozycje działań mających na celu zmniejszenie ryzyka – m.in. selektywne udostępnianie informacji, korzystanie z ustawień prywatności w serwisach online, regularna kontrola śladów cyfrowych oraz edukacja w zakresie cyberbezpieczeństwa.
