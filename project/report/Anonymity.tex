@@ -3,9 +3,8 @@
 
 % Definicja dokumentu
 \usepackage[unicode=true]{hyperref}
-\newcommand\PDFtitle{	
-To jest szablon (mam nadzieję)}
-\newcommand\PDFauthors{Jan Kąwałski}
+\newcommand\PDFtitle{Jak wiele informacji o sobie udostępniamy w Internecie}
+\newcommand\PDFauthors{Paulina Brzęcka 184701 Marek Borzyszkowski 184266}
 \hypersetup{
   pdftitle={\PDFtitle},
   pdfauthor={\PDFauthors},
@@ -96,14 +95,15 @@ To jest szablon (mam nadzieję)}
 
 % Część właściwa pracy
 \begin{document}
-\includepdf{chapters/oswiadczenia/tytulowa.pdf}
+% \includepdf{chapters/oswiadczenia/tytulowa.pdf}
 % \includepdf{chapters/oswiadczenia/oswiadczenie.pdf}
-\hfill
-\pagebreak
+\include{chapters/00_tytul}
+% \hfill
+% \pagebreak
 
-\include{chapters/0a_streszczenie}
+% \include{chapters/0a_streszczenie}
 \include{chapters/0b_spis_tresci}
-\include{chapters/0c_wykaz_skrotow}
+% \include{chapters/0c_wykaz_skrotow}
 \include{chapters/1_wstep}
 \include{chapters/2_podstawy}
 \include{chapters/3_rysunkiitabele}
