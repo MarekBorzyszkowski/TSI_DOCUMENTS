@@ -1,0 +1,5 @@
+1. Analiza podstawowych danych i budowa profilu.
+2. Źródła pozyskiwania informacji.
+3. Wykorzystanie danych przez różne podmioty.
+4. Zagrożenia wynikające z udostępniania danych.
+5. Zalecenia dotyczące ochrony prywatności.

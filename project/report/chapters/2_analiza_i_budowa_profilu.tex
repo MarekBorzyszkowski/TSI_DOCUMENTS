@@ -1,4 +1,4 @@
-\chapter{PODSTAWOWE ELEMENTY}
+\chapter{ANALIZA PODSTAWOWYCH DANYCH I BUDOWA PROFILU}
 
 To jest rozdział.
 
@@ -42,7 +42,7 @@ Aby zapewnić poprawny wygląd tekstu należy pamiętać o kilku rzeczach:
 \end{itemize}
 
 \section{Podział linii i paragrafy}
-\label{podzial}
+% \label{podzial}
 
 Nowy paragraf rozpoczyna się poprzez wstawienie jednej wolnej linii. Latex automatycznie wygeneruje wcięcie. Należy pamiętać, że pierwszy paragraf, zgodnie ze standardami drukarskimi, nie ma wcięcia! Możemy tym sterować za pomocą poleceń \textbf{noindent} (brak wcięcia) oraz \textbf{indent} (dodatkowe wcięcie).
 
@@ -71,7 +71,7 @@ Niektóre konstrukcje, np.\ równania, automatycznie włączają tryb matematycz
 
 \begin{equation}
   \mathcal{O(K,B,C,R)}
-  \label{eq:przyklad}
+  % \label{eq:przyklad}
 \end{equation}
 
 gdzie:\\
@@ -84,7 +84,7 @@ $\mathcal{R}$ - zbiór relacji wiążących elementy ontologii.
 W równaniach możemy stosować różne dodatkowe symbole oraz np.\ wyrównywać je do określonego miejsca. Służy do tego blok typu \textbf{split}, a sam punkt wyrównania określony jest ampersandem (\&). Przykład zastosowania prezentuje równanie~\ref{eq:split_ex}.
 
 \begin{equation}
-  \label{eq:split_ex}
+  % \label{eq:split_ex}
   \begin{split}
     \forall {x_1 \leq y_1, x_2 \leq y_2}&: f(x_1+x_2,y_1+y_2)\\ 
 				  &= \frac{y_1}{y_1+y_2}f(x_1,y_1)+\frac{y_2}{y_1+y_2}f(x_2,y_2)
@@ -100,9 +100,9 @@ Linie 75 -- 93 nagłówka dokumentu definiują nowe nazwy sekcji twierdzeń i do
 
  \begin{equation}
    sim_{lin}(A,B)=\frac{\log P(common(A,B))}{\log P(description(A,B))}
-   \label{eq:lin:theoremeq}
+  %  \label{eq:lin:theoremeq}
  \end{equation}
- \label{eq:lin:theorem}
+%  \label{eq:lin:theorem}
 \end{theorem}
 
 \begin{proof}
