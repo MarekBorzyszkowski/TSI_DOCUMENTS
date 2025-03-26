@@ -1,19 +1,74 @@
-\chapter{INNE PRZYDATNE KONSTRUKCJE}
-\section{Symbole otoczone kółkiem}
+\chapter{ZAGROŻENIA}
+\section{Zagrożenia wynikające z udostępniania danych}
 
-% Latex pozwala na tworzenie własnych znaków i symboli. W mojej rozprawie doktorskiej potrzebowałem zestawu symboli zamkniętych w okrąg, np.\ \mycircalign{+}, \mycircalign{-}, \mycircalign{k}. Za pomocą pakietu \textbf{tikz} zdefiniowałem dwa makra: \textbf{mycircalign} oraz \textbf{mycirc}. Pierwsze z nich otacza symbol kółkiem i wyrównuje powstały obrazek tak, by jego środek pokrywał się ze środkiem sąsiadujących znaków. Drugi układa elementy na linii tekstu, tak że spody znaków sąsiadujących i powstałego obrazka są wyrównane. Jak każde makro, również i te można używać zarówno w tekście jak i w środowisku matematycznym, tabelkach itp. (Równanie~\ref{eq:makro}).
+Współczesne organizacje i użytkownicy indywidualni coraz częściej stają się ofiarami zagrożeń wynikających z niekontrolowanego udostępniania danych. Informacje osobiste mogą zostać wykorzystane zarówno przez zewnętrznych atakujących, jak i osoby z wewnątrz firmy — obecnych lub byłych pracowników, kontrahentów, a nawet przypadkowych użytkowników popełniających błędy.
 
-% \begin{equation}
-%   \mathcal{O}_3 = \mathcal{O}_1 \mycircalign{+} \mathcal{O}_2
-%   \label{eq:makro}
-% \end{equation}
+\subsection{Kradzież tożsamości}
+Udostępnienie danych osobowych, takich jak imię, nazwisko, PESEL, numer dowodu czy adres e-mail, może skutkować:
+\begin{itemize}
+\item podszywaniem się pod ofiarę w celu zaciągnięcia pożyczki, otwarcia konta bankowego czy przeprowadzenia transakcji,
+\item wykorzystaniem danych w oszustwach ubezpieczeniowych, zdrowotnych lub podatkowych,
+\item długoterminowymi problemami finansowymi i prawnymi ofiary.
+\end{itemize}
 
-% \section{Tymczasowa zmiana rozmiaru strony}
+Przykład z życia: W ataku na Marriott w 2020 r. wyciekło ponad 5 mln rekordów gości, zawierających dane kontaktowe, urodziny i numery kont lojalnościowych.
 
-% Czasami zachodzi konieczność chwilowej zmiany rozmiaru strony, by np.\ udało się zmieścić jedną dodatkową linijkę tekstu. Możemy to wykonać za pomocą polecenia \textbf{enlargethispage\{\}}, gdzie jako parametr podajemy rozmiar oraz jednostkę. Należy pamiętać, że polecenie to musi zostać wydane odpowiednio wcześniej, by Latex zdążył zastosować nowy rozmiar strony. Najlepiej by te polecenie było bezpośrednio przed nową stroną, jednak zazwyczaj jest to kwestia poeksperymentowania. Wartość przekazana jako parametr może być także ujemna. Przykładowo strona zawierająca rozdział~\ref{listingi} została w niniejszym dokumencie pomniejszona o 5 cm wymuszając przeniesienie początku rozdziału~\ref{algorytmy} na następną stronę.
+\subsection{Naruszenie prywatności i poufności danych}
+Dane, które zostaną ujawnione — nawet nieświadomie — mogą naruszyć prywatność pracowników, klientów czy partnerów biznesowych. Skutki to:
+\begin{itemize}
+\item utrata kontroli nad własnymi informacjami,
+\item możliwość ich dalszego rozpowszechniania,
+\item narażenie na nieautoryzowane monitorowanie.
+\end{itemize}
+Przykład z życia: były pracownik Tesli w 2023 r. ujawnił dane ponad 75 000 pracowników, w tym numery SSN i informacje finansowe.
 
-% Strona zawierająca rozdział~\ref{rysunki} powiększono o~20~punktów, co pozwoliło uniknąć samotnej, pojedynczej linii tekstu kończącego akapit (tzw.\ wdowy) na następnej stronie. Takie drobne modyfikacje rozmiaru strony zazwyczaj są niezauważalne dla czytelnika a poprawiają ogólny układ dokumentu.
+\subsection{Cyberstalking i nękanie}
+Gdy dane kontaktowe lub lokalizacyjne stają się publiczne, rośnie ryzyko:
+\begin{itemize}
+\item śledzenia i nękania w sieci lub w świecie rzeczywistym,
+\item stosowania szantażu lub gróźb,
+\item prób kontaktu ze strony osób niepożądanych, np. stalkerów.
+\end{itemize}
+Przykład z życia: lokalizacja kobiety w Japonii po odbiciu w oku na zdjęciu.
 
-% \section{Wpisy bibliograficzne}
+\subsection{Oszustwa socjotechniczne i internetowe}
+Ujawnione dane są wykorzystywane do:
+\begin{itemize}
+\item phishingu (fałszywe e-maile i strony),
+\item spear-phishingu (ukierunkowane ataki na konkretną osobę),
+\item vishingu (oszustwa telefoniczne),
+\item przekonywania ofiar do ujawnienia loginów i haseł.
+\end{itemize}
 
-% Wpisy bibliograficzne przechowujemy w odrębnym pliku z rozszerzeniem\ .bib. Przykładowy plik został dołączony do tego dokumentu. Do pliku takiego należy dodawać odpowiedni sformatowane wpisy. Latex automatycznie posortuje je po nazwiskach autorów oraz do finalnego dokumentu dołączy tylko te wpisy,które posiadają odwołania w tekście! Można więc stworzyć kompletną bazę publikacji, a Latex użyje tylko to co potrzeba. Dodatkowo, dzięki użyciu pakietu \textbf{natbib} z parametrem \textbf{sort} (patrz preambuła dokumentu), numerki w odwołaniach również zostaną posortowane, niezależnie od kolejności podania odwołań. Przykład podano w rozdziale~\ref{podzial}.
+Przykład: w 2020 r. grupa atakujących uzyskała dostęp do systemów Twittera, podszywając się pod pracowników i kradnąc dane do kont znanych osób.
+
+\subsection{Konsekwencje reputacyjne}
+Dla osób publicznych, pracowników wysokiego szczebla lub właścicieli firm, ujawnienie danych może prowadzić do:
+\begin{itemize}
+\item utracenia zaufania klientów i partnerów,
+\item negatywnego rozgłosu medialnego
+\item trudności w znalezieniu nowej pracy lub rozwijaniu kariery.
+\end{itemize}
+
+Przykład: wyciek danych w firmach takich jak Proofpoint, Apple czy Google nadszarpnął ich wizerunek jako liderów w dziedzinie innowacji i bezpieczeństwa.
+
+Przykład: dane z Facebooka w 33\% spraw rozwodowych.
+
+\subsection{Odpowiedzialność prawna}
+Udostępnianie danych bez zgody lub ich niewłaściwe zabezpieczenie może skutkować:
+\begin{itemize}
+\item pozwami cywilnymi ze strony poszkodowanych osób,
+\item karami finansowymi za naruszenie przepisów o ochronie danych (np. RODO/GDPR),
+\item odpowiedzialnością dyscyplinarną lub karną.
+\end{itemize}
+
+Przykład: Microsoft mógłby zostać ukarany grzywną do 20 mln euro za wyciek danych z systemów GitHub, gdyby doszło do naruszenia danych klientów z UE.
+
+\section{Przykłady rzeczywistych incydentów \cite{zagrozeniaFirmy, zagrozeniaLudzie}}
+%TODO to będą pewnie jakies zdjęcia
+\begin{itemize}
+  \item \textbf{David Quintavalle} - błędnie oskarżony na podstawie zdjęcia.
+  \item \textbf{Angela Dunnn} - protesty po ujawnieniu adresu.
+  \item \textbf{Guy Babcock} - fałszywe oskarżenia o przestępstwa seksualne.
+  \item \textbf{Yue Chen} - ustalenie adresów lekarzy do planowania ataku.
+\end{itemize}

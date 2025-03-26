@@ -4,7 +4,7 @@ Identyfikacja i analiza publicznie dostępnych źródeł, takich jak media społ
 tu ogólniej:
 https://serwisy.gazetaprawna.pl/nowe-technologie/artykuly/1019082,prywatnosc-w-internecie.html
 
-## Cyfrowe ślady i utrata prywatności – jak sami ujawniamy o sobie zbyt wiele
+### Cyfrowe ślady i utrata prywatności – jak sami ujawniamy o sobie zbyt wiele
 
 Codzienna aktywność w Internecie – zwłaszcza w mediach społecznościowych – zostawia po sobie wiele cyfrowych śladów. Wystarczy kilka podstawowych informacji, takich jak imię, nazwisko i miejsce pracy lub zamieszkania, aby zidentyfikować daną osobę i zdobyć o niej szczegółowe dane.
 
@@ -21,7 +21,7 @@ Najczęstsze błędy popełniane przez użytkowników to:
 
 Na podstawie tych informacji można określić, **gdzie aktualnie przebywamy, gdzie mieszkamy i pracujemy**, a nawet zrekonstruować nasz plan dnia.
 
-#### Konsekwencje:
+### Konsekwencje:
 - **Przestępcy** mogą wykorzystać te dane do okradzenia mieszkania.
 - **Firmy windykacyjne** mogą szybciej ustalić naszą lokalizację.
 - **Złodzieje** mogą śledzić nasze nawyki i rutynę z pomocą danych GPS.
@@ -35,7 +35,7 @@ Komentarze w Internecie, nawet pod pseudonimem, nie są w pełni anonimowe. Powi
 - taki sam pseudonim jak na innych platformach,
 - **adres IP**, który często jest dołączany automatycznie do komentarzy.
 
-#### Potencjalne skutki:
+### Potencjalne skutki:
 - **Problemy zawodowe** – kontrowersyjne komentarze mogą dotrzeć do pracodawcy.
 - **Pozew cywilny** – za naruszenie dóbr osobistych innych osób.
 - **Utrata reputacji** – zarówno prywatnej, jak i zawodowej.
@@ -80,7 +80,7 @@ Eksperci jednogłośnie podkreślają, że nasza prywatność w sieci zależy pr
 tu szczególniej:
 https://serwisy.gazetaprawna.pl/nowe-technologie/artykuly/1017004,twitter-snapchat-iot-czyli-dane-konsumenta-na-wyciagniecie-reki-2000.html
 
-## Nowe źródła danych: media społecznościowe, IoT i pozornie „darmowe” usługi
+### Nowe źródła danych: media społecznościowe, IoT i pozornie „darmowe” usługi
 
 Zachowanie prywatności w sieci staje się coraz trudniejsze w dobie wszechobecnych mediów społecznościowych i rosnącej liczby urządzeń z kategorii Internetu Rzeczy (IoT). Informacje o użytkownikach stały się niezwykle cennym zasobem – jak mówi Mikko Hypponen, dyrektor ds. badań w F-Secure:
 
