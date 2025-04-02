@@ -1,130 +1,200 @@
 \chapter{ANALIZA PODSTAWOWYCH DANYCH I BUDOWA PROFILU}
 
-To jest rozdział.
+\section{Zakres i charakter danych osobowych w kontekście budowy profilu}
 
-\section{Podrozdziały}
+Analizując proces gromadzenia i wykorzystywania informacji, warto najpierw zrozumieć, co w świetle różnorodnych definicji i regulacji uznaje się za \emph{dane osobowe}. W literaturze i dokumentach anglojęzycznych często używa się określenia \textbf{Personally Identifiable Information (PII)}\cite{PII_USDE}, które obejmuje wszelkie dane pozwalające na bezpośrednie lub pośrednie zidentyfikowanie konkretnej osoby. W kontekście ustawodawstwa europejskiego termin ten pokrywa się w znacznej mierze z terminem \textbf{dane osobowe} w rozumieniu \emph{RODO}, a w praktyce oznacza wszelkie informacje związane z osobą fizyczną, które mogą posłużyć do jej zidentyfikowania.
 
-W Latexu w klasie dokumentów \textbf{book} wyróżniamy rozdziały (\textbf{chapter}), podrozdziały \textbf{section}, podpodrozdziały \textbf{subsection}, podpodpodrozdziały \textbf{subsubsection} i paragrafy (\textbf{paragraph}). Podpodpodrozdziały i paragrafy domyślnie nie są numerowane ani nie występują w spisie treści. Zachowanie to można zmienić poprzez funkcję \textbf{setcounter} umieszczaną w preambule. Wykomentowany przykład można znaleźć w kodzie tego dokumentu.
-
-Obecnie znajdujemy się na poziomie podrozdziału. Pozostałe przykłady poniżej.
-
-\subsection{Podpodrozdział}
-
-To jest podpodrozdział.
-
-\subsubsection{Podpodpodrozdział}
-
-To jest podpodpodrozdział. On nie jest domyślnie numerowany i nie występuje w spisie treści.
-
-\paragraph{Paragraf}
-
-A to jest paragraf. On również nie jest domyślnie numerowany i nie występuje w spisie treści.
-
-\section{Podstawowe elementy typograficzne}
-
-\subsection{Twarda spacja}
-
-Twarda spacja jest bardzo istotnym elementem, gdyż zabrania Latex'owi łamanie linii w miejscu jej wystąpienia, a tym samym pozwoli na niejako ,,sklejenie'' wyrazów ze sobą. Dzięki temu możemy uniknąć tzw.\ sierot (pojedynczych znaków na końcu wiersza). W Latex twardą spację umieszcza się wstawiając znak tyldy~(\textasciitilde). Zapisujemy to więc np.\ tak: ,,dokument, w{\textasciitilde}którym''.
-
-\subsection{Formatowanie tekstu}
-
-Aby zapewnić poprawny wygląd tekstu należy pamiętać o kilku rzeczach:
-
+\subsection{Elementy PII i podstawowe dane osobowe}
+Według definicji \emph{U.S. Department of Energy}\cite{PII_USDE}, za PII uznaje się:
 \begin{itemize}
- \item Linia poprzedzona procentem to komentarz.
- \item Poprzedzaniu spacji występującej po kropce kończącej skrót znakiem ucieczki, odstęp będzie wtedy taki, jak odstęp między wyrazami a~nie między zdaniami. Przykładowo zapis ,,np. tekst'' vs. ,,np.\ tekst''. Ten drugi jest poprawny, a zapisany został tak: ,,np.$\backslash$~tekst''.
- \item Skróty pisane wielkimi literami kończące zdanie powinny posiadać {$\backslash$}@ przed kropką kończącą zdanie, np.\ OCS{$\backslash$}@\@. Spowoduje to potraktowanie spacji jako spacji międzyzdaniowej z nie międzywyrazowej.
- \item Cudzysłowie zawsze tworzymy używając podwójnego przecinka jako symbolu otwierającego cudzysłów, oraz podwójnego apostrofu zamykającego cudzysłów.
- \item Kursywę uzyskujemy za pomocą słowa kluczowego {$\backslash$}textit, co w efekcie daje \textit{tekst kursywą}. Pogrubiony \textbf{używamy słowa kluczowego textbf}. Każdorazowo tekst mający być napisany danym krojem otaczamy nawiasami klamrowymi.
- \item Myślnik (--) tworzymy poprzez umieszczenie bezpośrednio po sobie dwu kresek (minusy). Różnica między nimi jest zasadnicza. Pojedynczy myślnik generuje krótką kreskę (-), podwójny długą (--), potrójny najdłuższą (---).
- \item Odwołania do różnych elementów dokumentu robimy poprzez słowo kluczowe \textbf{ref()}. Jako jego parametr wstawiamy nazwę zdefiniowaną za pomocą słowa kluczowego \textbf{label()}. Należy pamiętać, że odwołanie zwraca jedynie numer elementu, słowo opisowe, jak np.\ rozdział czy rysunek należy dodać samodzielnie. Polecam tutaj przyjąć jakąś konwencję i się jej trzymać w całym dokumencie. Tak samo należy postępować w przypadku etykiet.
- \item Latex doskonale radzi sobie z dzieleniem wyrazów na końcach linii, jednak czasami zachodzi konieczność wymuszenia podziału w określonym miejscu. W tym celu należy zastosować konstrukcję $\backslash$-. Latex takiego ukośnika nie wydrukuje dopóty, dopóki rzeczywiście w tym miejscu nie zostanie wykonane przeniesienie części wyrazu. Możliwe jest dodanie wielu podziałów w jednym wyrazie. Użyte wtedy zostanie to, które spowoduje wygenerowania ,,najładniejszego'' tekstu.
+    \item Dane \emph{jednoznacznie} identyfikujące daną osobę: między innymi imię, nazwisko, numer paszportu, numer PESEL (w kontekście polskim) lub inne unikalne identyfikatory.
+    \item Dane, które \emph{pozwalają} na ustalenie tożsamości osoby, nawet jeśli nie ma w nich bezpośrednich identyfikatorów. Może to być data urodzenia, kod pocztowy czy stan cywilny, jeśli te informacje odpowiednio skorelowane z innymi źródłami umożliwiają wskazanie konkretnej osoby.
 \end{itemize}
 
-\section{Podział linii i paragrafy}
-% \label{podzial}
+W polskich realiach \textbf{imię i nazwisko} także stanowią dane osobowe, choć w niektórych sytuacjach \emph{same w sobie} mogą nie być wystarczające do jednoznacznej identyfikacji - zależy to od kontekstu. Niemniej jednak, jak podkreślają eksperci\cite{LEXDIGITAL_CZY_IMIE_NAZW_TO_DANE_OS}, imię i nazwisko, w połączeniu z innymi informacjami (takimi jak miejsce zamieszkania czy data urodzenia), zdecydowanie umożliwia powiązanie takich danych z konkretną jednostką.
 
-Nowy paragraf rozpoczyna się poprzez wstawienie jednej wolnej linii. Latex automatycznie wygeneruje wcięcie. Należy pamiętać, że pierwszy paragraf, zgodnie ze standardami drukarskimi, nie ma wcięcia! Możemy tym sterować za pomocą poleceń \textbf{noindent} (brak wcięcia) oraz \textbf{indent} (dodatkowe wcięcie).
+\subsection{Jakie dane najczęściej ujawniamy w Internecie?}
+Według analizy przeprowadzonej na portalu \emph{CyberDefence24}\cite{CYB_DEF_NAJCZĘSTRZE_DANE}, większość internautów regularnie udostępnia:
+\begin{itemize}
+    \item \textbf{Imię i nazwisko} - choćby na portalach społecznościowych lub forach, gdzie rejestracja wymaga konta opartego na rzeczywistych danych.
+    \item \textbf{Adres e-mail} i \textbf{numer telefonu} - używane powszechnie do zakładania kont, newsletterów lub w procesach odzyskiwania haseł.
+    \item \textbf{Zdjęcia i nagrania wideo} - w wielu przypadkach z metadanymi (np. lokalizacją GPS), które mogą ujawniać dodatkowe informacje.
+    \item \textbf{Informacje o miejscu zamieszkania} - często w postach dotyczących codzienności lub jako część ustawień konta (w tym np. kod pocztowy).
+    \item \textbf{Zainteresowania, poglądy, aktywności} - w formie polubień stron, członkostwa w grupach tematycznych czy interakcji w komentarzach.
+\end{itemize}
 
-Jeżeli chcemy po prostu zrobić nową linię, bez tworzenia nowego paragrafu używamy konstrukcji $\backslash\backslash$. Efekt będzie taki, że paragraf\\
-będzie kontynuowany w nowej linii. Nie spowoduje to jednak rozciągnięcia poprzedniej linii. Zostanie ona przerwana tam gdzie tego sobie zażyczymy i kontynuowana w nowej linijce.
+Co istotne, \emph{nie musimy} samodzielnie publikować wszystkich tych danych. Część informacji zostaje ujawniona poprzez aktywność naszych znajomych i bliskich, którzy np. \emph{oznaczają} nas w lokalizacjach lub na zdjęciach, komentują sytuacje z naszego życia prywatnego czy rodzinnego, a także publikują różnego rodzaju \textbf{listy kontaktów}.
 
-A co w przypadku, gdy chcemy z jakiegoś powodu przerwać linię, ale wymusić justowanie tekstu? Weźmy dla przykładu fragment:
+\subsection{Konsekwencje łączenia danych z różnych źródeł}
+Nawet jeśli pojedyncza dana (np. adres e-mail) nie wydaje się sama w sobie istotna, to można ją bez trudu \emph{zmapować} z kolejnymi rejestrami, w których podawane są imię, nazwisko czy numer telefonu. Stąd już tylko krok do poznania rozbudowanej historii aktywności danej osoby w Internecie. Teoretycznie drobne fakty składają się na \textbf{profil cyfrowy}:
+\begin{itemize}
+    \item Dokładniejszy wgląd w preferencje, poglądy i preferowane aktywności.
+    \item Możliwość wyśledzenia relacji rodzinnych i towarzyskich.
+    \item Analiza trendów w zachowaniu i przewidywanie przyszłych aktywności.
+\end{itemize}
 
-Trzecim istotnym aspektem jest stosowana w~trakcie wytwarzania ontologii metodologia pracy~\cite{boinski2012kaskbook,boinski2011security}. Zastosowanie jednej z~uznawanych metodologii, takich jak Methontology, NeOn czy metodologia opracowana przez Noy~i~McGuiness, znacząco wpływa na jakoś uzyskanego produktu. Wspomniane metodologie w~dużej mierze uwzględniają potrzebę przyszłej integracji wiedzy, a~w połączeniu z~narzędziami typu Protégé czy OCS~\cite{boinski2007kaskbook,boinski2009ocs,boinski2010zespolowa}, pozwalają na tworzenie spójnych i~formalnie oraz logicznie poprawnych ontologii.
+W poprzednich częściach raportu wskazywaliśmy przypadki re-identyfikacji, w których kluczowe były właśnie tzw. \emph{quasi-identyfikatory} (data urodzenia, miejsce zamieszkania, płeć). Ich połączenie z innymi zasobami - często ogólnodostępnymi - prowadzi do \emph{deanonimizacji} osób, które uważały się za bezpieczne za sprawą samego ograniczenia ilości ujawnianych danych.
 
-Tekst zostaje bardzo brzydko złamany w środku odnośników do cytowań. Użycie podwójnego po słowie ,,metodologia'' w pierwszym zdaniu ukośnika da nam natomiast taki efekt:
+\vspace{12pt}
+\section{Profilowanie: definicje, zastosowania i zagrożenia}
 
-Trzecim istotnym aspektem jest stosowana w~trakcie wytwarzania ontologii metodologia \\ pracy~\cite{boinski2012kaskbook,boinski2011security}. Zastosowanie jednej z~uznawanych metodologii, takich jak Methontology, NeOn czy metodologia opracowana przez Noy~i~McGuiness, znacząco wpływa na jakoś uzyskanego produktu. Wspomniane metodologie w~dużej mierze uwzględniają potrzebę przyszłej integracji wiedzy, a~w połączeniu z~narzędziami typu Protégé czy OCS~\cite{boinski2007kaskbook,boinski2009ocs,boinski2010zespolowa}, pozwalają na tworzenie spójnych i~formalnie oraz logicznie poprawnych ontologii.
+Wraz ze wzrostem ilości informacji dostępnych w Internecie, coraz więcej podmiotów, zarówno komercyjnych, jak i publicznych, decyduje się na \textbf{profilowanie danych osobowych}. Jak wskazuje opracowanie PARP\cite{POIR_PROFILOWANIE}, profilowanie to zautomatyzowany proces przetwarzania danych osobowych, służący do oceny określonych czynników dotyczących osoby fizycznej, w szczególności do analizy lub prognozy aspektów związanych z wynikami w pracy, sytuacją ekonomiczną, zdrowiem, preferencjami osobistymi czy zainteresowaniami.
 
-Też nie ładnie, gdyż linijka jest niewyjustowana. Z pomocą przychodzi nam tutaj komenda \textbf{linebreak[]}, gdzie w nawiasie kwadratowym podajemy liczbę od 1 do 4 określająca jak bardzo zależy nam na tym, by linia została złamana w tym miejscu (4 to najwyższa wartość). Efekt jest następujący:
+\subsection{Techniki profilowania i sposoby wykorzystania}
+Profilowanie jest możliwe przede wszystkim dzięki:
+\begin{itemize}
+    \item \textbf{Zaawansowanej analityce danych (Data Analytics)} - wykorzystuje się algorytmy uczenia maszynowego i sztucznej inteligencji, które na podstawie dużych zbiorów informacji są w stanie kategoryzować użytkowników i przewidywać ich zachowania.
+    \item \textbf{Danym z różnych platform} - integracja danych z serwisów społecznościowych, systemów bankowych, firm ubezpieczeniowych czy sklepów internetowych pozwala na bogate wnioski dotyczące preferencji i ryzyka.
+    \item \textbf{Plikom cookies i innym formom śledzenia} - znaczniki i identyfikatory internetowe (np. adres IP, identyfikatory urządzeń mobilnych) umożliwiają śledzenie aktywności na wielu stronach i aplikacjach, budując pełen obraz nawyków użytkowników.
+\end{itemize}
 
-Trzecim istotnym aspektem jest stosowana w~trakcie wytwarzania ontologii metodologia \linebreak[4] pracy~\cite{boinski2012kaskbook,boinski2011security}. Zastosowanie jednej z~uznawanych metodologii, takich jak Methontology, NeOn czy metodologia opracowana przez Noy~i~McGuiness, znacząco wpływa na jakoś uzyskanego produktu. Wspomniane metodologie w~dużej mierze uwzględniają potrzebę przyszłej integracji wiedzy, a~w połączeniu z~narzędziami typu Protégé czy OCS~\cite{boinski2007kaskbook,boinski2009ocs,boinski2010zespolowa}, pozwalają na tworzenie spójnych i~formalnie oraz logicznie poprawnych ontologii.
+W efekcie firmy mogą np. \emph{personalizować} oferty handlowe, reklamy, rekomendacje produktowe czy decyzje kredytowe. Z jednej strony zwiększa to wygodę użytkownika (propozycja usług najlepiej pasujących do jego potrzeb), z drugiej - \emph{rodzi wiele pytań} o kontrolę nad tym, jakie informacje i w jaki sposób są wykorzystywane.
 
-Jeżeli z jakiegoś powodu potrzebujemy nową linię to używamy komendy \textbf{newpage}. \newpage Tekst występujący po niej znajdzie się na nowej stronie. Rozdziały itp.\ automatycznie generują nową stronę, przy czym w układzie dwustronnym nowy rozdział zawsze zacznie się od nieparzystej strony.
+\subsection{Zagrożenia wynikające z profilowania}
+Choć profilowanie niesie potencjalne korzyści, wiąże się też z licznymi zagrożeniami:
+\begin{enumerate}
+    \item \textbf{Brak transparentności} - użytkownik często nie ma świadomości, że jest profilowany ani w jakim zakresie dane na jego temat są gromadzone.
+    \item \textbf{Ryzyko dyskryminacji} - przy przyznawaniu kredytów, składek ubezpieczeniowych czy ofert pracy systemy oparte na algorytmach mogą \emph{wykluczać} określone grupy osób.
+    \item \textbf{Nieodwracalna identyfikacja} - gdy dane raz zostaną połączone z tożsamością użytkownika, trudno przywrócić wcześniejszy stan anonimowości, zwłaszcza jeśli informacje zostały skopiowane do wielu niezależnych baz.
+    \item \textbf{Luka w ochronie prywatności} - różne systemy prawne (np. w USA, w Unii Europejskiej czy w innych regionach) w odmienny sposób regulują zasady przetwarzania danych. W rezultacie przechwycenie danych z jednego kraju i przetworzenie ich w innym może \emph{osłabiać} gwarancje prywatności.
+\end{enumerate}
 
-\section{Środowisko matematyczne}
+W kontekście przepisów RODO (Rozporządzenie Ogólne o Ochronie Danych Osobowych), każda osoba ma prawo do informacji o profilowaniu oraz, w pewnych przypadkach, do \emph{wniesienia sprzeciwu} wobec takiego przetwarzania. Rzeczywiste zastosowanie tych uprawnień bywa jednak utrudnione, zwłaszcza gdy zakres i sposób pozyskiwania danych nie jest przejrzysty.
 
-Środowisko matematyczne otwieramy i zamykamy znakiem \$. Niektóre funkcje można używać tylko wewnątrz takiego środowiska. Przykładem niech będzie funkcja \textbf{mathcal} zamieniająca duże litery w symbole o charakterystycznym kroju, stosowanym do opisywania stałych, np.\ $\mathcal{O}$ czy $\mathcal{R(D,P,T,S,U,I)}$. Pamiętać należy, że zamienione zostaną wszystkie litery w wyrażeniu występującym wewnątrz nawiasów klamrowych.
+\subsection{Implikacje dla budowania profilu}
+Mechanizmy profilowania znacząco przyspieszają proces \emph{budowania zaawansowanego profilu}, o czym traktuje niniejszy rozdział raportu. Systemy oparte na uczeniu maszynowym są w stanie:
+\begin{itemize}
+    \item \textbf{Powiązać różne źródła} danych (np. z mediów społecznościowych, rejestrów genealogicznych, analiz geolokalizacyjnych) w jeden spójny model.
+    \item \textbf{Wnioskować} o cechach i zachowaniach, które nie zostały bezpośrednio udostępnione przez użytkownika (np. stan zdrowia, skłonność do podróży, zainteresowanie konkretną dziedziną).
+    \item \textbf{Generować prognozy i klasyfikacje}, które nie zawsze są zgodne z rzeczywistością, ale w wystarczająco wielu przypadkach pozwalają na skuteczne podejmowanie decyzji handlowych, politycznych czy społecznych.
+\end{itemize}
 
-Niektóre konstrukcje, np.\ równania, automatycznie włączają tryb matematyczny. Równania dobrze jest opisać, przykład przedstawia Równanie~\ref{eq:przyklad}.
+\noindent W połączeniu z \textbf{re-identyfikacją}, omawianą w poprzednich sekcjach, profilowanie tworzy środowisko, w którym pojedynczy użytkownik traci kontrolę nad własnym wizerunkiem i prywatnością w przestrzeni cyfrowej. Z tego względu rośnie znaczenie edukacji społecznej na temat świadomości cyfrowej oraz \emph{podstawowych praktyk} związanych z ochroną danych.
 
-\begin{equation}
-  \mathcal{O(K,B,C,R)}
-  % \label{eq:przyklad}
-\end{equation}
+\vspace{12pt}
+\paragraph{Wnioski i perspektywy}
+\noindent Omawiane w tej sekcji zjawiska ilustrują, jak budowanie profilu użytkownika \emph{wykracza} daleko poza analizę podstawowych danych osobowych. Dodatkowe techniki i narzędzia (takie jak profile behawioralne, narzędzia Big Data czy rozpoznawanie wzorców w aktywnościach online) \textbf{poszerzają} zakres i dokładność takiej analizy. Jednocześnie zmienia się status prawny i społeczny użytkowników, którzy muszą mierzyć się z \emph{możliwą dyskryminacją} lub \emph{utrudnieniem} dostępu do usług, jeśli wynik profilowania okaże się dla nich niekorzystny.
 
-gdzie:\\
-$\mathcal{K}$ - zbiór klas wchodzących w~skład ontologii,\\
-$\mathcal{B}$ - zbiór bytów wchodzących w~skład ontologii,\\
-$\mathcal{C}$ - zbiór komentarzy przypisanych do klas $\mathcal{K}$ i~bytów $\mathcal{B}$ wchodzących w~skład ontologii,\\
-$\mathcal{R}$ - zbiór relacji wiążących elementy ontologii.
+W kolejnych rozdziałach przyjrzymy się dokładniej mechanizmom i strategiom minimalizowania ryzyka związanego z profilowaniem oraz re-identyfikacją. Zastanowimy się też, jak w praktyce \emph{ograniczyć} nadmierne udostępnianie danych, aby nasza aktywność w Internecie nie stała się źródłem niekontrolowanego przepływu informacji o naszej tożsamości, zachowaniach i preferencjach.
 
+\section{Wykorzystanie OSINT w analizie podstawowych danych}
 
-W równaniach możemy stosować różne dodatkowe symbole oraz np.\ wyrównywać je do określonego miejsca. Służy do tego blok typu \textbf{split}, a sam punkt wyrównania określony jest ampersandem (\&). Przykład zastosowania prezentuje równanie~\ref{eq:split_ex}.
+\noindent
+Istotnym elementem pozyskiwania informacji, pozwalającym na \emph{ulepszenie} profilu osoby już na wczesnym etapie analizy, jest \textbf{OSINT (Open Source Intelligence)}. Polega on na wykorzystywaniu otwartych i publicznie dostępnych źródeł danych, co w znacznym stopniu ułatwia skorelowanie nawet \emph{podstawowych faktów} (np. daty urodzenia, miejsca zamieszkania, informacji genealogicznych) z dodatkowymi szczegółami na temat konkretnej jednostki.
 
-\begin{equation}
-  % \label{eq:split_ex}
-  \begin{split}
-    \forall {x_1 \leq y_1, x_2 \leq y_2}&: f(x_1+x_2,y_1+y_2)\\ 
-				  &= \frac{y_1}{y_1+y_2}f(x_1,y_1)+\frac{y_2}{y_1+y_2}f(x_2,y_2)
-  \end{split}
-\end{equation}
+\subsection{Kluczowe zasoby i narzędzia}
+Istnieje szereg zróżnicowanych repozytoriów i narzędzi wspierających OSINT, z czego najpopularniejsze to:
+\begin{itemize}
+    \item \emph{OSINT Framework}\cite{OSINT_FRAMEWORK} - interaktywna „mapa” serwisów i aplikacji służących do wyszukiwania osób, adresów e-mail, numerów telefonów czy aktywności w mediach społecznościowych.
+    \item \emph{IntelTechniques}\cite{INTELTECHNIQUES} - obszerna kolekcja linków i skryptów, ułatwiających przeszukiwanie konkretnych platform i rejestrów pod kątem danych o osobie.
+\end{itemize}
 
-\subsection{Twierdzenia i dowody}
+\subsection{Przykłady zastosowania OSINT w budowaniu profilu}
+W kontekście \textbf{analizy podstawowych danych i tworzenia profilu} jednostki, OSINT wspomaga:
+\begin{itemize}
+    \item \textbf{Wyszukiwanie danych kontaktowych i danych demograficznych} (m.in. imię, nazwisko, wiek, płeć, miejsce zamieszkania), które często można odnaleźć na publicznych profilach w mediach społecznościowych lub w rejestrach online.
+    \item \textbf{Powiązywanie istniejących informacji} - np. data i miejsce urodzenia \emph{zestawione} z rejestrami genealogicznymi, co pozwala szybciej zidentyfikować członków rodziny oraz kluczowe fakty biograficzne danej osoby.
+    \item \textbf{Pogłębianie wiedzy} o aktywnościach internetowych (dawne posty, wzmianki w forach, archiwach stron), co umożliwia uzupełnienie profilu o dodatkowe szczegóły, takie jak zainteresowania lub przybliżony stan majątkowy.
+\end{itemize}
 
-Linie 75 -- 93 nagłówka dokumentu definiują nowe nazwy sekcji twierdzeń i dowodów, oraz znacznik końca dowodu (taki czarny kwadracik). Dzięki nim można uzyskać ładnie wyglądające twierdzenia jak poniżej (Twierdzenie~\ref{eq:lin:theorem}). Zauważmy, że równanie dowodu nie jest równaniem numerowanym. Wszędzie tam, gdzie nie chcemy by rozdział czy dowolna inna sekcja była numerowana należy w jej nazwie użyć gwiazdki, np. \textbf{$\backslash$begin\{equation*\}}.
+\subsection{Znaczenie ogólnodostępnych źródeł}
+Wspomniane narzędzia bazują głównie na \textbf{powszechnie dostępnych danych}, do których należą m.in.:
+\begin{itemize}
+    \item \textbf{Serwisy genealogiczne} (np. FamilySearch, WikiTree), zawierające dane o dacie i miejscu urodzenia czy historii rodziny.
+    \item \textbf{Rejestry i bazy urzędowe} (krajowe i międzynarodowe) - od podstawowych statystyk demograficznych po niektóre listy adresowe.
+    \item \textbf{Platformy społecznościowe}, gdzie użytkownicy nierzadko sami dzielą się informacjami, \emph{ułatwiając} tym samym ustalenie ich tożsamości oraz najważniejszych cech profilu.
+\end{itemize}
 
-\begin{theorem}
- Podobieństwo pomiędzy pojęciami $A$ i~$B$ opisane jest stosunkiem ilości informacji niezbędnej do opisania ich wspólności znaczeniowej oraz ilością informacji niezbędnej do ich opisania (Równanie~\ref{eq:lin:theoremeq}).
+\subsection{Znaczenie OSINT na etapie „podstawowych danych”}
+W ramach \textbf{pierwszego etapu} analizy, gdy punktem wyjścia są \emph{proste} informacje (wiek, płeć, region zamieszkania), OSINT pomaga w:
+\begin{itemize}
+    \item \textbf{Weryfikacji autentyczności} - potwierdzeniu, czy dane elementy (np. data urodzenia) są spójne z innymi źródłami.
+    \item \textbf{Szybszym zawężeniu obszaru poszukiwań} - przeszukiwanie publicznych zasobów z użyciem narzędzi OSINT pozwala od razu odrzucić dane niewłaściwe i skupić się na informacjach naprawdę użytecznych w budowie profilu.
+    \item \textbf{Korelowaniu różnych identyfikatorów} - przykładowo, adres e-mail zarejestrowany w jednym serwisie może być powiązany z kontem w innej platformie, co otwiera dostęp do kolejnych danych.
+\end{itemize}
 
- \begin{equation}
-   sim_{lin}(A,B)=\frac{\log P(common(A,B))}{\log P(description(A,B))}
-  %  \label{eq:lin:theoremeq}
- \end{equation}
-%  \label{eq:lin:theorem}
-\end{theorem}
+\subsection{Podsumowanie}
+OSINT stanowi \textbf{skuteczne wsparcie} w procesie analizy podstawowych danych i \textbf{budowania profilu} osoby, uwidaczniając, jak wiele szczegółów można ustalić \emph{bez} zastosowania wyspecjalizowanych, zamkniętych baz czy usług komercyjnych. Otwarta struktura Internetu oraz rosnąca liczba publicznie dostępnych rejestrów sprawiają, że umiejętne korzystanie z OSINT stanowi nieodłączny element każdego przedsięwzięcia, w którym celem jest zebranie jak najbardziej szczegółowych i zweryfikowanych informacji na temat danej osoby.
 
-\begin{proof}
-  \begin{equation*}
-   \begin{split}
-     f(x,y)&=f(x+0,y+(y-x))\\
-	   &=\frac{x}{y}*f(x,x) +~\frac{y-z}{x}*f(0,y-z)\\
-	   &=\frac{x}{y}*1 +~\frac{y-z}{x}*0\\
-	   &=\frac{x}{y} \qed
-   \end{split}
- \end{equation*}
-\end{proof}
+\section{Przykład re-identyfikacji - jak pozornie anonimowe dane mogą ujawniać tożsamość}
 
-Inna ciekawa konstrukcja wykorzystująca tryb matematyczny do zapisania pewnego stwierdzenia:
+W ramach rozdziału warto przyjrzeć się przykładowi opisującemu, jak dane uznawane za anonimowe mogą zostać użyte do ponownej identyfikacji konkretnych osób. Przypadek opisany przez Adama Tannera w magazynie „Forbes” \cite{DNA_LEAK}
 
-Niech $A \subseteq T$, $C = N_y(A) \neq W$, a~$\alpha_y = \min_{a \in A, b\notin C} \{y(a) +~y(b) - q(a, b)\}$ oraz
+odnosi się do sytuacji, w której badacz z Uniwersytetu Harvarda połączył próbki DNA rzekomo „anonimowych” ochotników z publicznie dostępnymi danymi genealogicznymi. Dzięki temu zdołał przypisać je do konkretnych osób.
 
-\[ y'(v) = \left\{ \begin{array}{ll}
-                y(v) - \alpha_y & \mbox{jeżeli $v \in A$} \\
-                y(v) +~\alpha_y & \mbox{jeżeli $v \in C$} \\
-                y(v)            & \mbox{w innych przypadkach}
-               \end{array}
-       \right. \]
+\subsection{Re-identyfikacja na podstawie danych podstawowych}
 
-Zapis ten, acz skomplikowany, pozwala na reprezentację złożonych reguł matematycznych w postaci ładnie ułożonych i wyrównanych wierszy. Reguły \textbf{left} oraz \textbf{right} pozwalają na utworzenie nawiasów klamrowych, których rozmiar będzie automatycznie dostosowywany do rozmiaru elementu, jakie mają zawierać.
+W omawianym przykładzie kluczową rolę odgrywały wyłącznie \textit{podstawowe informacje}, takie jak:
+\begin{itemize}
+    \item Dane demograficzne (np. rok urodzenia, płeć, stan cywilny).
+    \item Częściowe dane genealogiczne (np. nazwiska przodków, zarys drzewa rodowego).
+    \item Ogólnodostępne rejestry i bazy, gdzie można zestawić powyższe informacje (np. rejestry ludności, dokumenty archiwalne).
+\end{itemize}
+
+Okazało się, że nawet przy anonimowych próbkach DNA można użyć \textbf{drobnych, publicznie dostępnych faktów} do precyzyjnego ustalenia tożsamości, jeśli tylko połączy się ze sobą odpowiednie elementy informacyjne pochodzące z wielu źródeł. Analiza ta nie wymagała specjalistycznych czy drogich rozwiązań; wystarczyły ogólnodostępne bazy genealogiczne oraz archiwa, które może przeszukiwać każdy internauta.
+
+\paragraph{Znaczenie tzw. \emph{quasi-identyfikatorów}}
+Kluczowe w procesie re-identyfikacji okazują się dane, które \emph{nie zawierają} jednoznacznych oznaczeń personalnych (np. imię i nazwisko wprost), ale w połączeniu z innymi źródłami tworzą wyraźny profil jednostki. Takie dane często nazywa się \textbf{quasi-identyfikatorami}. Należą do nich m.in.:
+\begin{itemize}
+    \item data urodzenia (w szczególności dzień i miesiąc),
+    \item kod pocztowy lub nazwa miejscowości,
+    \item płeć i wiek,
+    \item stan cywilny czy wykształcenie.
+\end{itemize}
+Choć z osobna nie stanowią kompletnego zestawu, to kiedy zestawi się je z innymi publicznymi rejestrami (np. spisy powszechne czy listy mieszkańców), zwykle szybko można zawęzić krąg osób do kilku lub wręcz jednej.
+
+\paragraph{Przykłady łączenia danych}
+Praktyka pokazuje, że re-identyfikacja bywa możliwa nawet w sytuacjach, gdy dane \emph{pozornie} zostały zanonimizowane. Oprócz badań genetycznych, podobne zagrożenia występują w innych dziedzinach:
+\begin{itemize}
+    \item \textbf{Informacje medyczne:} w przeszłości dowiedziono, że dane medyczne (np. rekordy ze szpitali) można powiązać z osobami, jeśli połączy się je z danymi demograficznymi z rejestrów urzędowych.
+    \item \textbf{Logi aktywności internetowej:} w przypadku wycieków logów wyszukiwarki internetowej, nawet częściowo zanonimizowane identyfikatory internautów okazywały się wystarczające do wydobycia szczegółów o ich życiu prywatnym (np. miejsca zamieszkania, zainteresowań, problemów zdrowotnych).
+    \item \textbf{Bazy genealogiczne:} gdy ktoś upublicznia fragment drzewa rodzinnego (nazwiska przodków, daty narodzin i zgonów), badacz może \emph{dosztukować} brakujące elementy, korzystając z rejestrów lub innych źródeł, w efekcie dopasowując profil do konkretnej osoby.
+\end{itemize}
+
+\paragraph{Dynamika zmian w dostępnych źródłach}
+Nie należy zapominać, że dostępność danych w Internecie \textbf{nieustannie się poszerza}. Dzięki digitalizacji i masowemu udostępnianiu zasobów (np. projektom bibliotek cyfrowych czy otwieraniu kolejnych baz urzędowych), dzisiejsza „bezpieczna” porcja informacji może jutro okazać się niewystarczająca do zachowania prywatności. Wraz z pojawianiem się nowych zbiorów - na przykład szczegółowych map geolokalizacyjnych, kolejnych edycji spisów powszechnych czy społecznościowych inicjatyw genealogicznych - \emph{również historyczne dane zyskują nowy kontekst} i mogą prowadzić do ujawnienia wrażliwych szczegółów.
+
+\paragraph{Podsumowanie zagadnienia re-identyfikacji}
+Zjawisko re-identyfikacji opartej na podstawowych danych unaocznia, że proces anonimizacji powinien uwzględniać coraz to nowsze i łatwiej dostępne źródła informacji. Jeśli nawet kilka lat temu uznano jakiś zbiór za bezpieczny (bo odarte z niego dane uznano za „nieszkodliwe”), to w obecnej rzeczywistości, gdzie poszczególne rejestry można swobodnie łączyć, \textbf{tylko szczególnie rygorystyczne metody anonimizacji} dają realną gwarancję ochrony prywatności. W praktyce zaś większość danych „anonimowych” może zostać \emph{deanonimizowana}, o ile dysponuje się wystarczającymi zasobami i wiedzą do ich korelowania z ogólnodostępnymi bazami.
+
+\subsection{Rola otwartych i powszechnie dostępnych źródeł}
+
+Zasadniczy problem ujawniony w tej historii polega na tym, że spora część naszych danych znajduje się w \textbf{otwartych i łatwo dostępnych} zasobach internetu. Dotyczy to m.in.:
+
+\begin{enumerate}
+    \item \textbf{Publicznych baz rządowych i organizacyjnych}:
+    \begin{itemize}
+        \item W Polsce są to choćby \url{https://dane.gov.pl/} czy \url{https://bdl.stat.gov.pl/} (Bank Danych Lokalnych GUS).
+        \item W USA bogatym źródłem statystyk jest \url{https://data.census.gov/}, a na poziomie europejskim - \url{https://data.europa.eu/}.
+        \item Informacje o zameldowaniach, urodzeniach czy zgonach znajdują się w różnorodnych spisach i rejestrach regionalnych.
+    \end{itemize}
+
+    \item \textbf{Serwisów genealogicznych i historycznych}:
+    \begin{itemize}
+        \item Popularne platformy (np. \url{https://www.familysearch.org/}, \url{https://www.wikitree.com/}) gromadzą nazwiska, daty, a czasem nawet dokumenty rodzinne, co umożliwia odtworzenie fragmentów drzew genealogicznych.
+        \item W niektórych krajach udostępniane są rejestry małżeństw, akt urodzeń i zgonów, które - choć ograniczone prawem - często dają się przeglądać bez większych formalności.
+    \end{itemize}
+
+    \item \textbf{Mediów społecznościowych i forów tematycznych}:
+    \begin{itemize}
+        \item Nawet jeśli użytkownicy nie udostępniają publicznie wszystkich danych, to często dzielą się szczegółami (np. datą urodzenia, miejscem zamieszkania, relacjami rodzinnymi) w otwartych grupach czy w komentarzach.
+        \item Analiza np. zdjęć może zdradzić lokalizację (dzięki metadanym GPS lub charakterystycznym elementom w tle).
+    \end{itemize}
+\end{enumerate}
+
+Dzięki wymienionym zasobom, osoba mająca wystarczającą motywację i podstawową wiedzę o metodach wyszukiwania jest w stanie zebrać rozmaite informacje o konkretnej jednostce. Początkowo są to drobne fakty (wiek, miejsce pochodzenia), jednak po złożeniu wszystkich elementów w całość otrzymujemy \textbf{szczegółowy profil} konkretnej osoby.
+
+\subsection{Konsekwencje dla prywatności i bezpieczeństwa}
+
+Opisany przykład wskazuje, że \textbf{anonimizacja} danych to często proces wyłącznie pozorny, zwłaszcza gdy nie uwzględnia się rosnącej liczby publicznie dostępnych zbiorów, z którymi można je zestawiać. Dla ochrony prywatności istotne jest, aby:
+
+\begin{enumerate}
+    \item \textbf{Świadomie udostępniać informacje}: Zastanowić się, czy publikacja konkretnego faktu (np. dokładnej daty urodzenia) jest faktycznie niezbędna w danym miejscu (profil społecznościowy, forum internetowe, ankieta itp.).
+    \item \textbf{Rozpoznawać ryzyko łączenia danych}: Nawet dane wrażliwe (np. zdrowotne czy genetyczne) mogą zostać dopasowane do osoby, jeśli w innej bazie lub w mediach społecznościowych widnieje choć część informacji „uzupełniających” (data urodzenia, nazwisko panieńskie matki, nazwa miejscowości).
+    \item \textbf{Szukać mechanizmów ochronnych}: Sprawdzać, czy wybrana platforma oferuje wystarczającą kontrolę nad prywatnością i przetwarzaniem danych. Zgłębiać też przepisy takie jak RODO (w Unii Europejskiej) czy HIPAA (w Stanach Zjednoczonych) - regulacje te ustalają m.in. obowiązki podmiotów przetwarzających dane.
+\end{enumerate}
+
+\subsection{Podsumowanie: wzór dla pozostałych analiz}
+
+Omówiony przypadek z artykułu z „Forbes” ukazuje zjawisko, które dotyczy nie tylko badań genetycznych, ale praktycznie każdej sytuacji, w której istnieje potencjał do \textbf{połączenia rzekomo anonimowych informacji z innymi zbiorami}. To właśnie w taki sposób, krok po kroku, tworzy się i uszczegóławia profil danej osoby.
+
