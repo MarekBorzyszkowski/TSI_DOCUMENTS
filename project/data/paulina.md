@@ -1,4 +1,4 @@
-# 2. Źródła pozyskiwania informacji
+### 2. Źródła pozyskiwania informacji
 Identyfikacja i analiza publicznie dostępnych źródeł, takich jak media społecznościowe, fora, blogi czy portale informacyjne, z których można pozyskać dodatkowe dane na temat danej osoby.
 
 tu ogólniej:
@@ -407,7 +407,7 @@ Zagrożenia wynikające z udostępniania danych są coraz bardziej powszechne i 
 to takie bardziej przyziemne:
 https://www.linkedin.com/pulse/10-times-someones-online-information-made-them-unsafe-bridges
 
-## Przykłady zagrożeń wynikających z udostępnienia danych osobowych
+### Przykłady zagrożeń wynikających z udostępnienia danych osobowych
 
 Poniżej opisano 10 przypadków, w których udostępnione dane osobowe doprowadziły do poważnych konsekwencji w świecie rzeczywistym: od nękania i gróźb po przemoc fizyczną, błędne oskarżenia i naruszenia reputacji.
 
